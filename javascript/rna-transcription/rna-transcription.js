@@ -1,12 +1,3 @@
-//
-//BASICAMENTE DONE, FALTA MUDAR O ERRO PARA O QUE ELES QUEREM I GUESS
-//
-
-function Error(errorMessage) {
-	this.error = errorMessage;
-	return this.error;
-}
-
 function DnaTranscriber() {
 	this.toRna = function(input) {
 		this.value = input;
