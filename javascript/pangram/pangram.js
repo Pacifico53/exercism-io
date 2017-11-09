@@ -4,7 +4,7 @@ function Pangram(input) {
 	let r = true;
 	this.isPangram = function(str) {
 		for (var i = 0; i < abc.length && r; i++) {
-			if (!this.string.includes(abc[i])) {r = false;}
+			r = this.string.includes(abc[i]);
 		}
 	return r;
 	}
