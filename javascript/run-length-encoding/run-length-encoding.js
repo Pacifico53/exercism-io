@@ -19,7 +19,7 @@ function RLE() {
 		let count = 0;
 		for (var i = 0; i < str.length; i++) {
 			if (!isNaN(str[i]) && str[i]!==' ') {
-				if(!isNaN(str[i+1])){count = Number(str[i]+str[i+1]);i++;}else{count = Number(str[i]);}
+				if(!isNaN(str[i+1]) && str[i+1]!==' '){count = Number(str[i]+str[i+1]);i++;}else{count = Number(str[i]);}
 				for (var j = 0; j < count; j++) {
 					result+=str[i+1];
 				}
