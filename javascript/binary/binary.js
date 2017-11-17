@@ -1,13 +1,13 @@
 function Binary (input) {
 	this.str = input;
 	this.toDecimal = function() {
+		if (!checkBinary(this.str)) {return 0}
 		let strDecimal = 0;
 		let n = this.str.length-1;
-		for (var i = 0; i < this.str.length && (this.str[i] === '0' || this.str[i] === '1'); i++) {
-				strDecimal += Math.pow(2, n) * parseInt(this.str[i], 2);
+		for (var i = 0; i < this.str.length; i++) {
+				strDecimal += Math.pow(2, n) * Number(this.str[i]);
 				n--;
 		}
-		if (!checkBinary(this.str)) {strDecimal = 0;}
 		return strDecimal;
 	}
 }
@@ -15,7 +15,7 @@ function Binary (input) {
 function checkBinary(str) {
 	let r = true;
 	for (var i = 0; i < str.length && r; i++) {
-		if (str[i] !== '0' && str[i] !== '1') {r = false;}
+		r = /[01]/.test(str[i]);
 	}
 	return r;
 }
