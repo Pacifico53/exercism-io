@@ -12,6 +12,7 @@ class RnaTranscription {
         				  break;
         		case 'A': result += 'U';
         				  break;
+        	    default: throw new IllegalArgumentException("Invalid input");
         	}
         }
         return result;
