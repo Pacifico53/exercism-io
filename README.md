@@ -1,5 +1,5 @@
 # exercism-io
 
-Exercicios de exercism
+Various programming exercices
 
-["EXERCISM LINK"](http://exercism.io/)
+[EXERCISM LINK](http://exercism.io/)
