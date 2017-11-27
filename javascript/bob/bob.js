@@ -33,6 +33,7 @@ function isALLCAPS(str) {
 			n = false;
 		}
 	}
+	n = /[A-Z]/.test(newStr);
 	return n;
 }
 
