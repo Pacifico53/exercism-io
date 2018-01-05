@@ -27,16 +27,7 @@ function isQuestion(str) {
 
 function isALLCAPS(str) {
 	this.newStr = str.trim();		//tira os espaços no fim da string
-	let n = true;
-    /*
-	for (var i = 0; i < this.newStr.length && n; i++) {			//enquanto o n é true, isto nao para (enquanto as letras sao maiusculas), so para no fim da str
-		if ((this.newStr[i] !== this.newStr[i].toUpperCase()) && (this.newStr[i] !== ' ')){			//verifica se a char é uppercase, e que nao é um espaço
-			n = false;
-		}
-	}
-    */
-	n = /^([^a-z0-9]|([^a-zA-Z].*(\!)$))*$/.test(newStr);
-	return n;
+	return /^([^a-z0-9]|([^a-zA-Z].*(\!)$))*$/.test(newStr); //praise regex
 }
 
 function isNothing(str) {
