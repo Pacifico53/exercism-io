@@ -1,5 +1,3 @@
-//TODO: DA ERRO NUMA STR COM VARIOS ESPAÇOS
-
 function RLE() {
 	this.encode = function (str) {
 		let result = '';
