@@ -1,4 +1,5 @@
 defmodule Bob do
+  @checkLetterRegex ~r([\p{L}]) #Regex that matches a string with one character (regular or cyrillic alphabet)
   def hey(input) do
     str = String.trim(input)
     cond do
@@ -11,7 +12,7 @@ defmodule Bob do
   end
 
   def is_question(str) do
-    String.last(str) == "?"  
+    String.last(str) == "?"
   end
 
   def is_nothing(str) do
@@ -19,6 +20,6 @@ defmodule Bob do
   end
 
   def is_shouting(str) do
-    str == String.upcase(str) && str =~ ~r([\p{L}]) #This checks if the string has at least one letter character
+    str == String.upcase(str) && str =~ @checkLetterRegex #This checks if the string has at least one letter character
   end
 end
